@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Hiking Island</string>
+    <string name="whoareyou_message">Who are you?</string>
+    <string name="welcome_message">Welcome!</string>
+
+    <!--texts-->
+    <string name="interest_basic">To participate in events</string>
+    <string name="interest_medium">To organize events</string>
+    <string name="interest_high">To create events</string>
+    <string name="man">Male</string>
+    <string name="woman">Female</string>
+
+    <!--buttons-->
+    <string name="register">New User</string>
+    <string name="login">Login</string>
+    <string name="accept_register">Register</string>
+
+    <!--label-->
+    <string name="main_label">Welcome to Hiking Island!</string>
+    <string name="register_label">New user</string>
+    <string name="welcome_label">Welcome</string>
+    <string name="gender_label">Gender</string>
+    <string name="name_label">Name</string>
+    <string name="surname_label">Surname</string>
+    <string name="age_label">Age</string>
+    <string name="nickname_label">Nickname</string>
+    <string name="pass_label">Password</string>
+    <string name="interest_label">Interests</string>
+    
+    <!--error-->
+    <string name="obligatory_field">Campo obligatorio</string>
+    <string name="numeric_field">Debe de tener 16 años o más</string>
+    <string name="error_numeric_between">La edad debe ser superior a 16</string>
+    <string name="compare_field">Contraseñas diferentes</string>
+
+
+</resources>
