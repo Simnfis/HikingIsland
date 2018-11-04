@@ -22,17 +22,7 @@ public class Main extends AppCompatActivity {
 
 
 
-        Button buttonOK = (Button) findViewById(R.id.main_button_ok);
-        buttonOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText editText = (EditText) findViewById(R.id.editText_main);
-                String name = editText.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), Basic_activity.class);
-                intent.putExtra("name", name);
-                startActivity(intent);
-            }
-        });
+
 
         Button buttonREG = (Button) findViewById(R.id.register_button);
         buttonREG.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +37,7 @@ public class Main extends AppCompatActivity {
         buttonLOG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, Registration_form.class);
+                Intent intent = new Intent(context, Login.class);
                 startActivity(intent);
             }
         });
