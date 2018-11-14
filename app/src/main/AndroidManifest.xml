@@ -21,17 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Basic_activity"
             android:label="@string/welcome_label"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".Main_login"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fran.hikingisland.hikingisland.Main" />
+                android:value="com.fran.hikingisland.hikingisland.Main_login" />
         </activity>
-
         <activity
             android:name=".Registration_form"
             android:label="@string/register_label"
@@ -40,9 +38,8 @@
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Main" />
+                android:value="com.fran.hikingisland.hikingisland.Main" />
         </activity>
-
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
@@ -51,9 +48,21 @@
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Main" />
+                android:value="com.fran.hikingisland.hikingisland.Main" />
         </activity>
-
+        <activity
+            android:name=".Main_login"
+            android:label="@string/title_activity_main_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Trails"
+            android:label="@string/title_activity_trails"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Main_login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fran.hikingisland.hikingisland.Main_login" />
+        </activity>
     </application>
 
 </manifest>

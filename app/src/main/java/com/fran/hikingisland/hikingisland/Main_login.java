@@ -1,6 +1,8 @@
 package com.fran.hikingisland.hikingisland;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main_login extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,9 +71,21 @@ public class Main_login extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        //Disconnect
+        if (id == R.id.action_disconnect) {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    startActivity(intent);
+                }
+            }, 1000);
+        }
+        if (id == R.id.action_option1) {
+            Toast.makeText(getApplicationContext(),"You have pressed option 1",Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.action_option2) {
+            Toast.makeText(getApplicationContext(),"You have pressed option 2",Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -80,22 +97,31 @@ public class Main_login extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_profile) {
+            String recover = getIntent().getExtras().getString("name");
+            Intent intent = new Intent(getApplicationContext(), Basic_activity.class);
+            intent.putExtra("name", recover);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(getApplicationContext(),"Galería",Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_trails) {
+            String recover = getIntent().getExtras().getString("name");
+            Intent intent = new Intent(getApplicationContext(), Trails.class);
+            intent.putExtra("name", recover);
+            startActivity(intent);
+        } else if (id == R.id.nav_help) {
+            Toast.makeText(getApplicationContext(),"Ayuda",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getApplicationContext(),"Enviar",Toast.LENGTH_SHORT).show();
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

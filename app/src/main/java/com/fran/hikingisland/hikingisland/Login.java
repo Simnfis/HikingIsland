@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
                 if (Validado==1){
                     EditText editText = (EditText) findViewById(R.id.email);
                     String name = editText.getText().toString();
-                    Intent intent = new Intent(getApplicationContext(), Basic_activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Main_login.class);
                     intent.putExtra("name", name);
                     startActivity(intent);}
                 }
@@ -80,8 +80,5 @@ public class Login extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(),"Login Correct",Toast.LENGTH_SHORT).show();
     }
-    public void onClick(View view) {
-        Intent intent = new Intent(context, Basic_activity.class);
-        startActivity(intent);
-    }
+
 }

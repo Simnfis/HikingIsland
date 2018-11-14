@@ -2,6 +2,7 @@ package com.fran.hikingisland.hikingisland;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -42,6 +43,7 @@ public class Trails extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -58,6 +60,9 @@ public class Trails extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
     }
 
@@ -141,5 +146,19 @@ public class Trails extends AppCompatActivity {
             // Show 3 total pages.
             return 3;
         }
+
+        @Override
+        public CharSequence getPageTitle (int position){
+            switch (position) {
+                case 0:
+                    return "Rout 1";
+                case 1:
+                    return "Rout 2";
+                case 2:
+                    return "Rout 3";
+            }
+            return null;
+            }
+        }
     }
-}
+

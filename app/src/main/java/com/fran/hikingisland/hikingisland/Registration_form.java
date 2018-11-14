@@ -1,6 +1,7 @@
 package com.fran.hikingisland.hikingisland;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -175,6 +176,10 @@ public class Registration_form extends AppCompatActivity {
             return;
         }
 
-        Toast.makeText(getApplicationContext(),"Se ha validado correctamente",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Se ha registrado correctamente",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(context, Main.class);
+        startActivity(intent);
+
+        };
     }
-}
+

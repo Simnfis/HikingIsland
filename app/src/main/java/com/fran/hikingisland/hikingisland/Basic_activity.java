@@ -1,5 +1,6 @@
 package com.fran.hikingisland.hikingisland;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -32,6 +33,8 @@ public class Basic_activity extends AppCompatActivity {
     private void ShowWelcome() {
         String recover = getIntent().getExtras().getString("name");
         TextView wlcm = (TextView) findViewById(R.id.Welcome_user_msg);
+        Intent intent = new Intent(getApplicationContext(), Main_login.class);
+        intent.putExtra("name", recover);
         wlcm.setText("Welcome " + recover);
     }
 
