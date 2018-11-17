@@ -31,11 +31,11 @@ public class Basic_activity extends AppCompatActivity {
     }
 
     private void ShowWelcome() {
-        String recover = getIntent().getExtras().getString("name");
+        //String recover = getIntent().getExtras().getString("name");
         TextView wlcm = (TextView) findViewById(R.id.Welcome_user_msg);
         Intent intent = new Intent(getApplicationContext(), Main_login.class);
-        intent.putExtra("name", recover);
-        wlcm.setText("Welcome " + recover);
+        //intent.putExtra("name", recover);
+        wlcm.setText("Welcome user" /**+ recover*/);
     }
 
 }

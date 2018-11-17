@@ -98,9 +98,9 @@ public class Main_login extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            String recover = getIntent().getExtras().getString("name");
+            //String recover = getIntent().getExtras().getString("name");
             Intent intent = new Intent(getApplicationContext(), Basic_activity.class);
-            intent.putExtra("name", recover);
+            //intent.putExtra("name", recover);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(),"Galería",Toast.LENGTH_SHORT).show();
